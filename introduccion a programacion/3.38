@@ -1,0 +1,14 @@
+Algoritmo sin_titulo
+	
+	Escribir "ingresa el numero "
+	leer nummayor
+	num=nummayor
+	Mientras num<>0 Hacer
+		si num> nummayor
+			nummayor=num
+		FinSi
+		Escribir "ingresa el numero"
+		Leer num
+	Fin Mientras
+	Escribir "el numero mayor es: ",nummayor
+FinAlgoritmo

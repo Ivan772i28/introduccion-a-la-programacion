@@ -1,0 +1,8 @@
+Algoritmo sin_titulo
+	Escribir "ingresa la calificacion de una materia"
+	Leer calificacion
+	si calificacion>=70
+		Escribir "Aprobaste la materia"
+		
+	FinSi
+FinAlgoritmo

@@ -1,0 +1,34 @@
+Algoritmo sin_titulo
+	Imprimir "Ingresa el número de Mes: " 
+	Leer mes 
+	Segun mes Hacer 
+		1: 
+			
+			mesley = "Enero" 
+		2: 
+			mesley = "Febrero" 
+		3: 
+			mesley = "Marzo" 
+		4: 
+			mesley = "Abril" 
+		5: 
+			mesley = "Mayo" 
+		6: 
+			mesley = "Junio" 
+		7: 
+			mesley = "Julio" 
+		8: 
+			mesley = "Agosto" 
+		9: 
+			mesley = "Septiembre" 
+		10: 
+			mesley = "Octubre" 
+		11: 
+			mesley = "Noviembre" 
+		12: 
+			mesley = "Diciembre" 
+		De Otro Modo: 
+			mesley = "Mes incorrecto" 
+	Fin Segun 
+	Imprimir mesley 
+FinAlgoritmo

@@ -1,0 +1,18 @@
+Algoritmo sin_titulo
+	suma=0
+	contador=0
+	Escribir "ingresa un numero(ingresa negativo si desea terminar):  "
+	Leer ning
+	Mientras ning>=0 Hacer
+		suma=suma+ning
+		contador=contador+1
+		Escribir "ingresa un numero(ingresa negativo si desea terminar):  "
+		Leer ning
+	Fin Mientras
+	si contador>0
+		promedio=suma/contador
+		Escribir "la media es: ",promedio
+	SiNo
+		Escribir "no se ingresaron numeros positivos"
+	FinSi
+FinAlgoritmo

@@ -1,0 +1,9 @@
+Algoritmo sin_titulo
+	Escribir"Ingresa tu nombre: "
+	Leer nombre
+	Escribir "Ingresa tu altura: "
+	Leer altura 
+	si altura>1.78
+		Escribir "felicidades ",nombre," eres elegible para jugar baloncesto"
+	FinSi
+FinAlgoritmo

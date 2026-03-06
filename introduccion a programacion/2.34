@@ -1,0 +1,22 @@
+Algoritmo sin_titulo
+	Escribir "ingresa el primer valor"
+	leer n1
+	Escribir "ingresa el el caracter +, -, *, /) "
+	leer operador
+	Escribir "ingresa el segundo valor"
+	leer n2
+	segun operador Hacer
+		"+":
+			resultado=n1+n2
+		"-":
+			resultado=n1-n2
+		"*":
+			resultado=n1*n2
+		"/":
+			resultado=n1/n2
+		De Otro Modo:
+			Escribir "ingresa un caracter valido"
+	FinSegun
+	Escribir "el resultado es: ",resultado
+	
+FinAlgoritmo

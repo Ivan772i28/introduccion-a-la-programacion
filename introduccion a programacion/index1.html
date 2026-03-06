@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VS Code Cheat Sheet</title>
+
+<style>
+:root{
+    --primary:#1e1e1e;
+    --accent:#007acc;
+    --gray:#888;
+}
+
+body{
+    margin:0;
+    font-family: Consolas, monospace;
+    background:var(--primary);
+    color:#fff;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px;
+}
+
+.header{
+    text-align:center;
+}
+
+.header img{
+    width:90px;
+    margin-bottom:10px;
+}
+
+h1{
+    color:var(--accent);
+    margin:5px 0;
+}
+
+.subtitle{
+    font-size:14px;
+    color:var(--gray);
+    margin-bottom:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#252526;
+    padding:15px;
+    border-radius:8px;
+    border-left:4px solid var(--accent);
+}
+
+.card img{
+    width:100%;
+    border-radius:6px;
+    margin-top:8px;
+}
+
+.card h2{
+    margin-top:0;
+    font-size:15px;
+    color:var(--accent);
+}
+
+ul{
+    padding-left:18px;
+}
+
+code{
+    background:#333;
+    padding:3px 6px;
+    border-radius:4px;
+    color:#00ffcc;
+    font-size:13px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    font-size:12px;
+    color:#777;
+}
+
+@media print{
+    body{
+        background:white;
+        color:black;
+    }
+    .card{
+        background:white;
+        border:1px solid #ccc;
+        color:black;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <!-- Logo VS Code -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo">
+    <h1>VS CODE</h1>
+    <p class="subtitle">Cheat Sheet – Instalación y Uso Básico</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h2>Descarga</h2>
+<ul>
+<li>Ir a: <code>code.visualstudio.com</code></li>
+<li>Clic en <strong>Download</strong></li>
+<li>Elegir sistema operativo</li>
+</ul>
+
+<!-- Imagen ejemplo sitio web -->
+<img src="vscintsa.png" alt="Página oficial VS Code">
+</div>
+
+<div class="card">
+<h2>Instalación Windows</h2>
+<ul>
+<li>Ejecutar <code>.exe</code></li>
+<li>Marcar:
+    <ul>
+        <li>Add to PATH</li>
+        <li>Open with Code</li>
+    </ul>
+</li>
+<li>Install → Finish</li>
+</ul>
+
+<!-- Imagen ejemplo instalador -->
+<img src="instalador.png" alt="Instalador VS Code">
+</div>
+
+<div class="card">
+<h2>Verificar</h2>
+<ul>
+<li>Abrir <code>cmd</code></li>
+<li>Escribir:</li>
+</ul>
+<code>code --version</code>
+
+<img src="terminal.png" alt="Terminal VS Code">
+</div>
+
+<div class="card">
+<h2>Extensiones Clave</h2>
+<ul>
+<li>Python</li>
+<li>C/C++</li>
+<li>Live Server</li>
+<li>GitLens</li>
+<li>Prettier</li>
+</ul>
+
+<img src="extenciones.png" alt="Marketplace Extensiones">
+</div>
+
+</div>
+
+<div class="footer">
+Cheat Sheet rápida – Visual Studio Code BY ivan
+</div>
+
+</div>
+
+</body>
+</html>

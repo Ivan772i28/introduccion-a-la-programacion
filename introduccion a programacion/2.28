@@ -1,0 +1,22 @@
+Algoritmo sin_titulo
+	Escribir "ingresa el tipo de membresia que tienes"
+	Leer tipo_m
+	Escribir "Ingresa el gasto"
+	leer gastofn
+	si tipo_m="A" O tipo_m="a"
+		descuento=0.1
+	SiNo
+		si tipo_m="B" O tipo_m="b"
+			descuento=0.15
+		SiNo
+			si tipo_m="C" O tipo_m="c"
+				descuento=0.2
+			SiNo
+			descuento=0
+			FinSi
+		FinSi
+	FinSi
+	gastofn=gastofn-(gastofn*descuento)
+	Escribir "el precio final a pagar es : ",gastofn
+	
+FinAlgoritmo

@@ -1,0 +1,7 @@
+Algoritmo sin_titulo
+	Escribir "ingresa el numero a evaluar si es par"
+	Leer numero
+	si numero MOD 2=0
+		Escribir"el numero :",numero," es par "
+	FinSi
+FinAlgoritmo

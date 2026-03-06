@@ -1,0 +1,24 @@
+Algoritmo sin_titulo
+	Escribir "Ingresa la primera calificación"
+	Leer cal1
+	
+	Escribir "Ingresa la segunda calificación"
+	Leer cal2
+	
+	Escribir "Ingresa la tercera calificación"
+	Leer cal3
+	
+	promedio = (cal1 + cal2 + cal3) / 3
+	
+	Si promedio >= 70 Entonces
+		
+		Escribir "Promedio: ", promedio
+		Escribir "El estudiante APROBÓ"
+		
+	Sino
+		
+		Escribir "Promedio: ", promedio
+		Escribir "El estudiante REPROBÓ"
+		
+	FinSi
+FinAlgoritmo

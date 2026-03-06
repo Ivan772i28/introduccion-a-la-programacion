@@ -1,0 +1,15 @@
+Algoritmo sin_titulo
+	
+	Escribir "Ingresa el valor de la compra"
+	Leer compra
+	Si compra > 15000 Entonces
+		descuento = compra * 0.10
+	Sino
+		descuento = compra * 0.05
+		
+	FinSi
+	precioFinal = compra - descuento
+	Escribir "El descuento es de ", descuento
+	Escribir "El precio final es de ", precioFinal
+	
+FinAlgoritmo

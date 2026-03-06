@@ -1,0 +1,20 @@
+Algoritmo sin_titulo
+	
+		
+		Escribir "Ingresa las horas trabajadas"
+		Leer horas
+		
+		Si horas <= 40 Entonces
+			
+			salario = horas * 20
+			
+		Sino
+			
+			horasExtras = horas - 40
+			salario = (40 * 20) + (horasExtras * 25)
+			
+		FinSi
+		
+		Escribir "El salario semanal es ", salario
+
+FinAlgoritmo

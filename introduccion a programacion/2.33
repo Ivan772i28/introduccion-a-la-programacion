@@ -1,0 +1,32 @@
+Algoritmo validar_fecha
+    Escribir "Ingresa el número de mes: "
+    Leer nmes
+    Escribir "Ingresa el número de día: "
+    Leer ndia
+	
+    Segun nmes Hacer
+        1,3,5,7,8,10,12:   // Meses con 31 días
+            Si ndia >= 1 Y ndia <= 31 Entonces
+                Escribir "Fecha válida"
+            SiNo
+                Escribir "Día inválido"
+            FinSi
+			
+        4,6,9,11:          // Meses con 30 días
+            Si ndia >= 1 Y ndia <= 30 Entonces
+                Escribir "Fecha válida"
+            SiNo
+                Escribir "Día inválido"
+            FinSi
+			
+        2:                 // Febrero (sin considerar años bisiestos)
+            Si ndia >= 1 Y ndia <= 28 Entonces
+                Escribir "Fecha válida"
+            SiNo
+                Escribir "Día inválido"
+            FinSi
+			
+        De Otro Modo:
+            Escribir "Mes inválido"
+    FinSegun
+FinAlgoritmo
