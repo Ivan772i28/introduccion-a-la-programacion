@@ -1,0 +1,67 @@
+Algoritmo sin_titulo
+	Dimensionar zona_oriente[4,2500]
+	Dimensionar zona_poniente[4,2500]
+	Dimensionar zona_norte1[1000],zona_norte2[1500],zona_norte3[2000],zona_norte4[2500]
+	Dimensionar zona_sur1[1000],zona_sur2[1500],zona_sur3[2000],zona_sur4[2500]
+	res="si"
+	Mientras Minusculas(res)="si" Hacer
+	Escribir "seleccione la zona: "
+	Escribir "1.- zona oriente"
+	Escribir "2.- zona poniente: "
+	Escribir "3.- zona norte: "
+	Escribir "4.- zona sur: "
+	leer zona
+	Mientras zona<=0 o zona>=5 Hacer
+		Escribir "zona incorrecta, el rango permitido es de 1-4"
+		leer zona
+	FinMientras
+	Escribir "seleccione la zona: "
+	Escribir "1.- nivel 1: "
+	Escribir "2.- nivel 2: "
+	Escribir "3.- nivel 3: "
+	Escribir "4.- nivel 4: "
+	leer nivel
+	Mientras nivel<=0 o nivel>=5 Hacer
+		Escribir "nivel incorrecto, el rango permitido es de 1-4"
+		leer nivel
+	FinMientras
+	segun zona Hacer
+		1 o 2:nmax=2500
+		3 o 4:
+			segun nivel hacer
+				1:nmax=1000
+				2:nmax=1500
+				3:nmax=2000
+				4:nmax=2500
+			FinSegun
+	FinSegun
+	Escribir "ingresa un numero de asiento"
+	leer asiento 
+	Mientras asiento<=0 o asiento>nmax Hacer
+		Escribir "numero de asiento incorrecto "
+		leer asiento
+	FinMientras
+	asiento=asiento-1
+	nivel=nivel-1
+	Segun zona hacer
+		1:
+			si zona_oriente[nivel,asiento]=0 Entonces
+				Escribir "asiento disponible y se marcara ocupado"
+				zona_oriente[nivel,asiento]=1
+			SiNo
+				Escribir "el asiento no esta disponible, seleccione otro"
+			FinSi
+		2:
+			si zona_poniente[nivel,asiento]=0 Entonces
+				Escribir "asiento disponible y se marcara ocupado"
+				zona_poniente[nivel,asiento]=1
+			SiNo
+				Escribir "el asiento no esta disponible, seleccione otro"
+			FinSi
+	FinSegun
+	
+	
+		Escribir "deseas realizar otra venta(si/no)"
+		Leer res
+	FinMientras
+FinAlgoritmo
