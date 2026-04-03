@@ -1,0 +1,79 @@
+trabajadores = [
+    [100, "José Pérez Ramos", "Producción", "Obrero", 7, 825, 9, 200, 0],
+    [110, "Pablo Ramírez Ruiz", "Producción", "Obrero", 7, 825, 10, 200, 0],
+    [130, "Ma. Luz Aguilar Hernández", "Producción", "Obrero", 7, 825, 12, 200, 0],
+    [135, "Roberto Haro Torres", "Ventas", "Empleado", 15, 955, 10, 250, 0],
+    [143, "Rosa López Juárez", "Ventas", "Empleado", 15, 955, 4, 250, 0],
+    [150, "Ramón Martínez Suarez", "Ventas", "Empleado", 15, 955, 9, 250, 0],
+    [163, "Santiago Alonso Contreras", "Compras", "Empleado", 15, 955, 11, 250, 0],
+    [174, "Jesús Campos Sánchez", "Compras", "Empleado", 15, 955, 11, 250, 0],
+    [183, "Moisés Castro Montante", "Compras", "Empleado", 15, 955, 0, 250, 0],
+    [192, "Pablo Cervantes Salinas", "Recursos Humanos", "Empleado", 15, 955, 6, 250, 0],
+    [203, "Anahí Torres Carreón", "Recursos Humanos", "Empleado", 15, 955, 3, 250, 0],
+    [213, "Nuria Lira González", "Recursos Humanos", "Empleado", 15, 955, 0, 250, 0],
+    [226, "Miguel Mendoza Sánchez", "Producción", "Empleado", 7, 825, 1, 200, 0],
+    [234, "Sofia González Esparza", "Dirección", "Directivo", 15, 2000, 0, 800, 0],
+    [241, "Cristian González González", "Producción", "Obrero", 7, 825, 6, 200, 0],
+    [255, "Juan Gámez Aguilar", "Ventas", "Empleado", 15, 955, 8, 250, 0],
+    [261, "Fernando López Nuño", "Dirección", "Empleado", 15, 1200, 1, 250, 0],
+    [274, "Abraham Lozano De Lira", "Compras", "Empleado", 15, 955, 8, 250, 0],
+    [283, "Ángel Negrete Demetrio", "Ventas", "Empleado", 15, 955, 1, 250, 0],
+    [294, "Damián Nieves Quezada", "Recursos Humanos", "Empleado", 15, 955, 10, 250, 0],
+    [307, "Armando Reyes Martínez", "Compras", "Empleado", 15, 955, 8, 250, 0],
+    [318, "Manuel Ruiz Mendoza", "Ventas", "Empleado", 15, 955, 3, 250, 0],
+    [326, "Esteban Salado Muñoz", "Dirección", "Directivo", 15, 1500, 0, 1000, 0],
+    [331, "Alejandro Soto Ocampo", "Dirección", "Directivo", 15, 1200, 0, 1200, 0],
+    [337, "Alondra Valdés Mora", "Dirección", "Directivo", 15, 1200, 0, 2000, 0],]
+def buscar_empleado(trabajadores, numero):
+    i=0
+    while i<len(trabajadores):
+        if trabajadores[i][0]==numero:
+            return i
+        i=i+1
+    return -1
+
+def modificar(trabajadores):
+    print("\n---Lista de trabajadores---")
+    for j in trabajadores:
+        print(j[0],"-",j[1])
+    num=int(input("Ingrese el número del trabajador a modificar: "))
+    pos=buscar_empleado(trabajadores, num)
+    if pos==-1:
+        print("No se encontró el trabajador")
+        return
+    while True:
+        print("\n---Menú de modificación---")
+        print("1.No.Trabajador")
+        print("2.Nombre")
+        print("3.Departamento")
+        print("4.Tipo de empleado")
+        print("5.Dias trabajados")
+        print("6.Pago por díario")
+        print("7.Horas extras")
+        print("8.Pago por hora extra")
+        print("9.Bono")
+        print("10.regresar")
+        opcion=int(input("Ingrese la opción a modificar: "))
+        if opcion==10:
+            break
+        if opcion==1:
+            trabajadores[pos][0]=int(input("Ingrese el nuevo número del trabajador: "))    
+        elif opcion==2:
+            trabajadores[pos][1]=input("Ingrese el nuevo nombre del trabajador: ")
+        elif opcion==3:
+            trabajadores[pos][2]=input("Ingrese el nuevo departamento del trabajador: ")
+        elif opcion==4:
+            trabajadores[pos][3]=input("Ingrese el nuevo tipo de empleado: ")
+        elif opcion==5:
+            trabajadores[pos][4]=int(input("Ingrese los nuevos días trabajados: "))
+        elif opcion==6:
+            trabajadores[pos][5]=int(input("Ingrese el nuevo pago por día: "))
+        elif opcion==7:
+            trabajadores[pos][6]=int(input("Ingrese las nuevas horas extras: "))
+        elif opcion==8:
+            trabajadores[pos][7]=int(input("Ingrese el nuevo pago por hora extra: "))
+        elif opcion==9:
+            trabajadores[pos][8]=int(input("Ingrese el nuevo bono: "))
+        else:
+            print("Opción no válida, intente de nuevo.")
+modificar(trabajadores)
