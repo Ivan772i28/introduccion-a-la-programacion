@@ -1,4 +1,4 @@
-trabajadores = [
+empleados = [
     [100, "José Pérez Ramos", "Producción", "Obrero", 7, 825, 9, 200, 0],
     [110, "Pablo Ramírez Ruiz", "Producción", "Obrero", 7, 825, 10, 200, 0],
     [130, "Ma. Luz Aguilar Hernández", "Producción", "Obrero", 7, 825, 12, 200, 0],
@@ -24,22 +24,22 @@ trabajadores = [
     [326, "Esteban Salado Muñoz", "Dirección", "Directivo", 15, 1500, 0, 1000, 0],
     [331, "Alejandro Soto Ocampo", "Dirección", "Directivo", 15, 1200, 0, 1200, 0],
     [337, "Alondra Valdés Mora", "Dirección", "Directivo", 15, 1200, 0, 2000, 0],]
-def buscar_empleado(trabajadores, numero):
+def buscar_empleado(empleados, numero):
     i=0
-    while i<len(trabajadores):
-        if trabajadores[i][0]==numero:
+    while i<len(empleados):
+        if empleados[i][0]==numero:
             return i
         i=i+1
     return -1
 
-def modificar(trabajadores):
-    print("\n---Lista de trabajadores---")
-    for j in trabajadores:
+def modificar(empleados):
+    print("\n---Lista de empleados---")
+    for j in empleados:
         print(j[0],"-",j[1])
     num=int(input("Ingrese el número del trabajador a modificar: "))
-    pos=buscar_empleado(trabajadores, num)
+    pos=buscar_empleado(empleados, num)
     if pos==-1:
-        print("No se encontró el trabajador")
+        print("No se encontró el empleado")
         return
     while True:
         print("\n---Menú de modificación---")
@@ -57,23 +57,23 @@ def modificar(trabajadores):
         if opcion==10:
             break
         if opcion==1:
-            trabajadores[pos][0]=int(input("Ingrese el nuevo número del trabajador: "))    
+            empleado[pos][0]=int(input("Ingrese el nuevo número del trabajador: "))    
         elif opcion==2:
-            trabajadores[pos][1]=input("Ingrese el nuevo nombre del trabajador: ")
+            empleado[pos][1]=input("Ingrese el nuevo nombre del trabajador: ")
         elif opcion==3:
-            trabajadores[pos][2]=input("Ingrese el nuevo departamento del trabajador: ")
+            empleado[pos][2]=input("Ingrese el nuevo departamento del trabajador: ")
         elif opcion==4:
-            trabajadores[pos][3]=input("Ingrese el nuevo tipo de empleado: ")
+            empleado[pos][3]=input("Ingrese el nuevo tipo de empleado: ")
         elif opcion==5:
-            trabajadores[pos][4]=int(input("Ingrese los nuevos días trabajados: "))
+            empleado[pos][4]=int(input("Ingrese los nuevos días trabajados: "))
         elif opcion==6:
-            trabajadores[pos][5]=int(input("Ingrese el nuevo pago por día: "))
+            empleado[pos][5]=int(input("Ingrese el nuevo pago por día: "))
         elif opcion==7:
-            trabajadores[pos][6]=int(input("Ingrese las nuevas horas extras: "))
+            empleado[pos][6]=int(input("Ingrese las nuevas horas extras: "))
         elif opcion==8:
-            trabajadores[pos][7]=int(input("Ingrese el nuevo pago por hora extra: "))
+            empleado[pos][7]=int(input("Ingrese el nuevo pago por hora extra: "))
         elif opcion==9:
-            trabajadores[pos][8]=int(input("Ingrese el nuevo bono: "))
+            empleado[pos][8]=int(input("Ingrese el nuevo bono: "))
         else:
             print("Opción no válida, intente de nuevo.")
-modificar(trabajadores)
+modificar(empleados)
