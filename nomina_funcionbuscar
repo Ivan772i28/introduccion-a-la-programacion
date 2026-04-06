@@ -57,23 +57,23 @@ def modificar(empleados):
         if opcion==10:
             break
         if opcion==1:
-            empleado[pos][0]=int(input("Ingrese el nuevo número del trabajador: "))    
+            empleados[pos][0]=int(input("Ingrese el nuevo número del trabajador: "))    
         elif opcion==2:
-            empleado[pos][1]=input("Ingrese el nuevo nombre del trabajador: ")
+            empleados[pos][1]=input("Ingrese el nuevo nombre del trabajador: ")
         elif opcion==3:
-            empleado[pos][2]=input("Ingrese el nuevo departamento del trabajador: ")
+            empleados[pos][2]=input("Ingrese el nuevo departamento del trabajador: ")
         elif opcion==4:
-            empleado[pos][3]=input("Ingrese el nuevo tipo de empleado: ")
+            empleados[pos][3]=input("Ingrese el nuevo tipo de empleado: ")
         elif opcion==5:
-            empleado[pos][4]=int(input("Ingrese los nuevos días trabajados: "))
+            empleados[pos][4]=int(input("Ingrese los nuevos días trabajados: "))
         elif opcion==6:
-            empleado[pos][5]=int(input("Ingrese el nuevo pago por día: "))
+            empleados[pos][5]=int(input("Ingrese el nuevo pago por día: "))
         elif opcion==7:
-            empleado[pos][6]=int(input("Ingrese las nuevas horas extras: "))
+            empleados[pos][6]=int(input("Ingrese las nuevas horas extras: "))
         elif opcion==8:
-            empleado[pos][7]=int(input("Ingrese el nuevo pago por hora extra: "))
+            empleados[pos][7]=int(input("Ingrese el nuevo pago por hora extra: "))
         elif opcion==9:
-            empleado[pos][8]=int(input("Ingrese el nuevo bono: "))
+            empleados[pos][8]=int(input("Ingrese el nuevo bono: "))
         else:
             print("Opción no válida, intente de nuevo.")
 modificar(empleados)
